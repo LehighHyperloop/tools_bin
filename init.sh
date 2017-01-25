@@ -3,10 +3,10 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
   exit 1
 fi
 
-REPO_DIR=$(cd "$(dirname "$0")" && pwd)
-BIN_DIR="${REPO_DIR}/tools/bin"
+export REPO_DIR=$(cd "$(dirname "$0")" && pwd)
+export BIN_DIR="${REPO_DIR}/tools/bin"
+export PATH="${BIN_DIR}:${PATH}"
 
 echo "REPO_DIR=${REPO_DIR}"
 echo "BIN_DIR=${BIN_DIR}"
-
-export PATH="${BIN_DIR}:${PATH}"
+echo 'Added $BIN_DIR to path!'

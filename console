@@ -1,0 +1,2 @@
+#!/bin/bash
+python "${REPO_DIR}/tools/console/console.py"
